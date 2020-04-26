@@ -5,7 +5,7 @@
 \usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{enumerate}
-\usepackage{amsmath}     
+\usepackage{amsmath}
 \usepackage{ngerman}
 
 % the document
@@ -21,22 +21,71 @@
 
 \section*{Aufgabe 1}
 \begin{enumerate}[a)]
-\item Immer falsch. $w$ ist Tupel und keine Menge.
-\item Immer richtig. Menge selber gehört zu seiner eigenen Potenzmenge($\Omega \subseteq \Omega$).
+\item Immer falsch. $w$ ist Tupel und $A$ ist Menge.
+\item Immer richtig. Menge selber gehört zu seiner eigenen Potenzmenge.
 \item Immer richtig. $w \in \Omega \Rightarrow \{ w \} \in A$.
 \item Immer richtig. $w$ ist Tupel.
 \item Immer falsch. $w$ ist Tupel, nicht Menge.
 \item Immer falsch. Da $w_i$ kein Tupel.
-\item Im Allgemeinen falsch. $w_m \in \{ 1,...,n \}$.
+\item Im Allgemeinen falsch.
 \item Immer richtig. A ist die Potenzmenge von $\Omega$. Alle diese Elemente sind drin.
 \end{enumerate}
 
 \section*{Aufgabe 2}
+\begin{enumerate}[a)]
+ \item 
+ \begin{align}
+ |N^M| &\overset{Def.}{=} |\{f Abb.\,|\,f: M \rightarrow N\}| \notag \\
+&= Anzahl Moeglichkeiten |M| Elemente auf |N| Elemente abzubilden. \notag \\
+&= |N|^{|M|} \notag
+\end{align}
+ \item
+$|2^M| \overset{Def.}{=} |\{ X\,|\,X \subseteq M \}|$
+ 
+Für jede Teilmenge $X \subseteq M$ exsitiert genau eine Funktion mit:
+ \begin{align}
+ f_x: M \rightarrow \{0,1\} \notag\\
+ f_x(a) = \left\{
+          \begin{aligned}
+           &0, falls \quad a \notin X \\
+           &1, sonst
+          \end{aligned}\right.  \notag
+ \end{align}
+  Somit ist:
+\begin{align}
+|2^M| &= |\{ f Abb.\,|\,f: M \rightarrow \{0,1\}\}| \notag \\
+ &= |\{0,1\}^M| \notag \\
+ &= 2^{|M|} \notag
+\end{align}
+
+\end{enumerate}
+
 
 
 \section*{Aufgabe 3}
 \begin{enumerate}[a)]
- \item 
+ \item Beweis mit vollständigen Induktion:
+ 
+IA: $\quad n = 0 \Rightarrow k = 0$
+ \begin{align}
+  \binom{0}{0} &= |\{N \subset \{1,\ldots,0\} | |N| = 0\}| (Nach Def.)\notag\\
+ &= 1 =  \frac{0!}{0! \bullet (0 - 0)!} \notag 
+\end{align}
+
+$IS: n \Rightarrow n + 1$
+\begin{align}
+ \binom{n+1}{k} &= |\{N \subset \{1,\ldots,n + 1\} | |N| = k\}| \notag \\
+ &= |\{N \subset \{1,\ldots,n\} | |N| = k\}| \notag \\
+ &+ |\{N \subset \{1,\ldots,n + 1\} | |N| = k \cap n + 1 \}| \notag \\
+ &= \binom{n}{k} + |\{N \subset \{1,\ldots,n\} | |N| = k - 1\}| \notag \\
+ &= \binom{n}{k} + \binom{n}{k-1} \notag \\
+ &\overset{IV}{=} \frac{n!}{k! \bullet (n - k)!} + \frac{n!}{(k - 1)! \bullet (n - k + 1)!} \notag \\
+ &= \frac{n!}{(k - 1)! \bullet (n - k)!} \times (\frac{1}{k} + \frac{1}{n - k + 1}) \notag \\
+ &= \frac{n!}{(k - 1)! \bullet (n - k)!} \times \frac{n - k + 1 + k}{k \bullet (n - k + 1)} \notag \\
+ &= \frac{(n + 1)!}{k! \bullet ((n + 1) - k)!} \notag 
+ \end{align}
+
+
  \item Die Reihenfolge von Kombination eindeutig: 
  \[
  \frac{1}{49 \times 48 \times \ldots \times 44}
@@ -44,7 +93,7 @@
  
  Die Reihenfolge ist egal:
   \[
- \frac{1}{\binom{49}{6}}
+ \frac{1}{\binom{49}{6}} = \frac{1}{13983816}
  \]
 \end{enumerate}
 
