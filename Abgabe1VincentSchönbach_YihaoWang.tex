@@ -21,13 +21,13 @@
 
 \section*{Aufgabe 1}
 \begin{enumerate}[a)]
-\item Immer falsch. $w$ ist Tupel und $A$ ist Menge.
+\item Immer falsch. $w$ ist Tupel und keine Menge.
 \item Immer richtig. Menge selber gehört zu seiner eigenen Potenzmenge.
 \item Immer richtig. $w \in \Omega \Rightarrow \{ w \} \in A$.
 \item Immer richtig. $w$ ist Tupel.
 \item Immer falsch. $w$ ist Tupel, nicht Menge.
 \item Immer falsch. Da $w_i$ kein Tupel.
-\item Im Allgemeinen falsch.
+\item Im Allgemeinen falsch. $w_m \in \{ 1,...,n \}$.
 \item Immer richtig. A ist die Potenzmenge von $\Omega$. Alle diese Elemente sind drin.
 \end{enumerate}
 
@@ -35,14 +35,14 @@
 \begin{enumerate}[a)]
  \item 
  \begin{align}
- |N^M| &\overset{Def.}{=} |\{f Abb.\,|\,f: M \rightarrow N\}| \notag \\
-&= Anzahl Moeglichkeiten |M| Elemente auf |N| Elemente abzubilden. \notag \\
+ |N^M| &\overset{Def.}{=} |\{f Abb.\mid f: M \rightarrow N\}| \notag \\
+&= \text{Anzahl Möglichkeiten $|M|$ Elemente auf $|N|$ Elemente abzubilden} \notag \\
 &= |N|^{|M|} \notag
 \end{align}
  \item
 $|2^M| \overset{Def.}{=} |\{ X\,|\,X \subseteq M \}|$
  
-Für jede Teilmenge $X \subseteq M$ exsitiert genau eine Funktion mit:
+Für jede Teilmenge $X \subseteq M$ existiert genau eine Funktion mit:
  \begin{align}
  f_x: M \rightarrow \{0,1\} \notag\\
  f_x(a) = \left\{
@@ -53,7 +53,7 @@ Für jede Teilmenge $X \subseteq M$ exsitiert genau eine Funktion mit:
  \end{align}
   Somit ist:
 \begin{align}
-|2^M| &= |\{ f Abb.\,|\,f: M \rightarrow \{0,1\}\}| \notag \\
+|2^M| &= |\{ f Abb. \mid f: M \rightarrow \{0,1\}\}| \notag \\
  &= |\{0,1\}^M| \notag \\
  &= 2^{|M|} \notag
 \end{align}
@@ -68,16 +68,16 @@ Für jede Teilmenge $X \subseteq M$ exsitiert genau eine Funktion mit:
  
 IA: $\quad n = 0 \Rightarrow k = 0$
  \begin{align}
-  \binom{0}{0} &= |\{N \subset \{1,\ldots,0\} | |N| = 0\}| (Nach Def.)\notag\\
+  \binom{0}{0} &= |\{N \subset \{1,\ldots,0\} \mid |N| = 0\}| (Nach Def.)\notag\\
  &= 1 =  \frac{0!}{0! \bullet (0 - 0)!} \notag 
 \end{align}
 
 $IS: n \Rightarrow n + 1$
 \begin{align}
- \binom{n+1}{k} &= |\{N \subset \{1,\ldots,n + 1\} | |N| = k\}| \notag \\
- &= |\{N \subset \{1,\ldots,n\} | |N| = k\}| \notag \\
- &+ |\{N \subset \{1,\ldots,n + 1\} | |N| = k \cap n + 1 \}| \notag \\
- &= \binom{n}{k} + |\{N \subset \{1,\ldots,n\} | |N| = k - 1\}| \notag \\
+ \binom{n+1}{k} &= |\{N \subset \{1,\ldots,n + 1\} \mid |N| = k\}| \notag \\
+ &= |\{N \subset \{1,\ldots,n\} \mid |N| = k\}| \notag \\
+ &+ |\{N \subset \{1,\ldots,n + 1\} \mid |N| = k \land n + 1 \}| \notag \\
+ &= \binom{n}{k} + |\{N \subset \{1,\ldots,n\} \mid |N| = k - 1\}| \notag \\
  &= \binom{n}{k} + \binom{n}{k-1} \notag \\
  &\overset{IV}{=} \frac{n!}{k! \bullet (n - k)!} + \frac{n!}{(k - 1)! \bullet (n - k + 1)!} \notag \\
  &= \frac{n!}{(k - 1)! \bullet (n - k)!} \times (\frac{1}{k} + \frac{1}{n - k + 1}) \notag \\
@@ -100,9 +100,9 @@ $IS: n \Rightarrow n + 1$
 \section*{Aufgabe 4}
 \begin{enumerate}[a)]
  \item 
- Zähler: Die Wahrscheinlichkeit, die k-mal Kopf von n-mal zu erhalten.
+ Zähler: Anzahl Möglichkeiten, genau k-mal Kopf von n-mal Werfen zu erhalten.
  
- Nenner: Alle Ergebnisse $ \Rightarrow $ n-mal fair werfen $({\frac 12})^{n}$
+ Nenner: Anzahl aller Möglichkeiten $ \Rightarrow $ n-mal fair werfen $({\frac 12})^{n}$.
 \item
 \[
  \frac{\binom{n}{1}}{2^{n}} = \frac{n}{2^{n}}
