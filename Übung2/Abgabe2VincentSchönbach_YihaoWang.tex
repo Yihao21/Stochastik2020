@@ -1,0 +1,78 @@
+% header
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{ngerman}
+
+% the document
+\begin{document}
+
+% create the title
+% Please replace the data in brackets [] with actual data.
+\title{Abgabe - Übungsblatt [$2$]\\
+\small{Angewandte Mathematik: Stochastik}}
+\author{ [Vincent Schönbach] \and [Yihao Wang]}
+\date{\today}
+\maketitle
+
+\section*{Aufgabe 1}
+\begin{enumerate}[a)]
+ \item Ein System M von Teilmengen von $\Omega$ heißt $\sigma - $ Algebra über $\Omega$, wenn gilt: $\Omega \in M$, aber es ist nicht der Fall.
+ \item $\{\emptyset, \Omega, \{r,g\}, \{b\}, \{r,g,b\}, \{r,g,a\}, \{b,a\},\{a\}\}$
+ \item 
+ \begin{tabular}{|l|l|}
+  \hline
+  {\bfseries Ererignis} & {\bfseries Wahrscheinlichkeit P}\\
+  \hline
+  $\emptyset$ & 0\\
+  \hline
+  $\Omega$ & 1\\
+  \hline
+  $\{r,g\}$ & $3 / 8$\\
+  \hline
+  $\{b\}$ & $1 / 4$\\
+  \hline
+  $\{r,g,b\}$ & $5 / 8$\\
+  \hline
+  $\{r,g,a\}$ & $3 / 4$\\
+  \hline
+  $\{b,a\}$ & $5 / 8$\\
+  \hline
+  $\{a\}$ & $3 / 8$\\
+  \hline
+ \end{tabular}
+
+\end{enumerate}
+
+
+\section*{Aufgabe 2}
+\begin{enumerate}[a)]
+ \item 
+ $\Omega_7 = [1:6]^7 = \{(\omega_1, \ldots, \omega_7) \mid \forall i: \omega_i \in [1:6]\}$
+ \item
+ $A = \{(\omega_1, \ldots, \omega_7) \in \Omega \mid \forall j \in [1:6], \exists i \in [1:7]: \omega_i = j\}$\\
+ $B = \{(\omega_1, \ldots, \omega_7) \in \Omega \mid \sum_{i=1}^{7} \omega_i \quad mod \quad 2 = 0\}$
+ \item
+ $\vert \Omega \vert = 6^7$\\
+ $\vert A \vert = 6! \times \binom{7}{1} \times 6$ Begründung: Man wählt zunächst einen freien Platz von 7 Plätze, und in diesen Platz gibt es 6 möglich Würfeln. 6 Fakultät bedeutet, der Rest darf jede Zahl genau ein mal erscheinen, und die Reihenfolge davon ist auch wichtig.\\
+ $\vert B \vert = \frac{6^7}{2}$ Begründung: gerade+gerade = gerade, nicht gerade + nicht gerade = gerade. Die sind alle Fällen.
+\end{enumerate}
+
+\section*{Aufgabe 3}
+z.zg: $\mathcal{A}_1,\mathcal{A}_2, \ldots \in \mathcal{A} \Rightarrow \bigcap\limits_{i \geq 1}\mathcal{A}_i \in  \mathcal{A}$
+\begin{align}
+ &Bew: Sei \quad\mathcal{A}_1,\mathcal{A}_2, \ldots \in \mathcal{A}\notag \\
+ &\overset{Def (b)}{\Rightarrow} \mathcal{A}_1 ^ c,\mathcal{A}_2 ^ c, \ldots \in \mathcal{A}\notag \\
+ &\overset{Def (c)}{\Rightarrow} \bigcup\limits_{i \geq 1}\mathcal{A}_i ^ c\in  \mathcal{A} \notag \\
+ &\Rightarrow (\bigcap\limits_{i \geq 1}\mathcal{A}_i)^c \in \mathcal{A} (De-morgansche Gesetz)\notag \\
+ &\overset{Def (b)}{\Rightarrow} \bigcap\limits_{i \geq 1}\mathcal{A}_i \in \mathcal{A} \notag
+ \end{align}
+
+
+\section*{Aufgabe 4}
+
+\end{document}
