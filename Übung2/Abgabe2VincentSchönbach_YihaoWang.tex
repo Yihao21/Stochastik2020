@@ -6,6 +6,7 @@
 \usepackage{enumerate}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{colortbl}
 \usepackage{ngerman}
 
@@ -27,7 +28,7 @@
  \item 
  \begin{tabular}{|l|l|}
   \hline
-  {\bfseries Ererignis} & {\bfseries Wahrscheinlichkeit P}\\
+  {\bfseries Erergnis} & {\bfseries Wahrscheinlichkeit P}\\
   \hline
   $\emptyset$ & 0\\
   \hline
@@ -92,23 +93,24 @@ z.zg: $\mathcal{A}_1,\mathcal{A}_2, \ldots \in \mathcal{A} \Rightarrow \bigcap\l
  &\overset{Def (b)}{\Rightarrow} \mathcal{A}_1 ^ c,\mathcal{A}_2 ^ c, \ldots \in \mathcal{A}\notag \\
  &\overset{Def (c)}{\Rightarrow} \bigcup\limits_{i \geq 1}\mathcal{A}_i ^ c\in  \mathcal{A} \notag \\
  &\Rightarrow (\bigcap\limits_{i \geq 1}\mathcal{A}_i)^c \in \mathcal{A} (De-morgansche\ Gesetz)\notag \\
- &\overset{Def (b)}{\Rightarrow} \bigcap\limits_{i \geq 1}\mathcal{A}_i \in \mathcal{A} \notag
+ &\overset{Def (b)}{\Rightarrow} \bigcap\limits_{i \geq 1}\mathcal{A}_i \in \mathcal{A} \qed \notag
  \end{align}
+ 
 
 
 \section*{Aufgabe 4}
-IA: $\quad n = 0$
+IA: $n = 0$
  \begin{align}
 P(\mathcal{A}_1) - 0 \leq P(\mathcal{A}_1) \notag
 \end{align}
 IS: $n \rightarrow n + 1$
 \begin{align}
 &\qquad \sum_{i=1}^{n+1} P(\mathcal{A}_i) - \sum_{i < j} P(\mathcal{A}_i \bigcap \mathcal{A}_j)\notag \\
-&= \sum_{i=1}^{n} P(\mathcal{A}_i) - \sum_{i < j} P(\mathcal{A}_i \bigcap \mathcal{A}_j) + P(\mathcal{A}_{n+1}) - \sum_{i < n + 1} \mathcal{A}_i \bigcap \mathcal{A}_{n+1} \notag \\
-&\overset{IV}{\leq}P(\bigcup\limits_{i=1}^n\mathcal{A}_i) + P(\mathcal{A}_{n+1}) - \sum_{i < n + 1} \mathcal{A}_i \bigcap \mathcal{A}_{n+1}\notag \\
+&= \sum_{i=1}^{n} P(\mathcal{A}_i) - \sum_{i < j} P(\mathcal{A}_i \bigcap \mathcal{A}_j) + P(\mathcal{A}_{n+1}) - \sum_{i < n + 1}P(\mathcal{A}_i \bigcap \mathcal{A}_{n+1}) \notag \\
+&\overset{IV}{\leq}P(\bigcup\limits_{i=1}^n\mathcal{A}_i) + P(\mathcal{A}_{n+1}) - \sum_{i < n + 1}P (\mathcal{A}_i \bigcap \mathcal{A}_{n+1})\notag \\
 &\overset{1.4(4)}{\leq} \sum_{i=1}^n P(\mathcal{A}_i) + P(\mathcal{A}_{n + 1}) - P(\bigcap\limits_{i = 1}^{n+1}\mathcal{A}_i) \notag \\
-&\leq \sum_{i=1}^{n+1} P(\mathcal{A}_i) - P(\bigcap\limits_{i = 1}^{n+1}\mathcal{A}_i) \notag \\
-&\overset{1.4(2)}{\leq} P(\bigcup\limits_{i = 1}^{n+1} \mathcal{A}_i)\notag
+&= \sum_{i=1}^{n+1} P(\mathcal{A}_i) - P(\bigcap\limits_{i = 1}^{n+1}\mathcal{A}_i) \notag \\
+&\overset{1.4(2)}{\leq} P(\bigcup\limits_{i = 1}^{n+1} \mathcal{A}_i) \qed \notag
 \end{align}
 
 \end{document}
