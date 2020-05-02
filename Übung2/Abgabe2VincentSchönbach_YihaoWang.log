@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.4.8)  2 MAY 2020 18:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.4.8)  2 MAY 2020 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -263,7 +263,7 @@ Package: ngerman 1998/07/08 v2.5e Support for writing german texts (br)
 \grmnU@D=\dimen118
 ngerman -- \language number for naustrian undefined, default 33 used.
 )
-No file Abgabe2VincentSchönbach_YihaoWang.aux.
+(./Abgabe2VincentSchönbach_YihaoWang.aux)
 \openout1 = `Abgabe2VincentSchönbach_YihaoWang.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -282,6 +282,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 \AtBeginShipoutBox=\box31
 Package hyperref Info: Link coloring OFF on input line 14.
+
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -293,6 +294,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
 LaTeX Info: Redefining \nameref on input line 14.
+
+(./Abgabe2VincentSchönbach_YihaoWang.out)
+(./Abgabe2VincentSchönbach_YihaoWang.out)
 \@outlinefile=\write3
 \openout3 = `Abgabe2VincentSchönbach_YihaoWang.out'.
 
@@ -323,34 +327,27 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 116.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 116.
- (./Abgabe2VincentSchönbach_YihaoWang.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 116.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 
-
-Package rerunfilecheck Warning: File `Abgabe2VincentSchönbach_YihaoWang.out' h
-as changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Abgabe2VincentSchönbach_YihaoWang.
-out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
+(./Abgabe2VincentSchönbach_YihaoWang.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
+Package rerunfilecheck Info: File `Abgabe2VincentSchönbach_YihaoWang.out' has 
+not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
- 6279 strings out of 492167
- 87367 string characters out of 6131559
- 182529 words of memory out of 5000000
+ 6287 strings out of 492167
+ 87613 string characters out of 6131559
+ 179658 words of memory out of 5000000
  10583 multiletter control sequences out of 15000+600000
  12742 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,10n,31p,337b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,10n,31p,337b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -362,11 +359,11 @@ public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Abgabe2VincentSchönbach_YihaoWang.pdf (2 pages, 143133 bytes
+Output written on Abgabe2VincentSchönbach_YihaoWang.pdf (4 pages, 143774 bytes
 ).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
