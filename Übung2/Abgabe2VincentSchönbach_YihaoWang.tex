@@ -6,6 +6,7 @@
 \usepackage{enumerate}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{colortbl}
 \usepackage{ngerman}
 
 % the document
@@ -59,7 +60,29 @@
  \item
  $\vert \Omega \vert = 6^7$\\
  $\vert A \vert = 6! \times \binom{7}{1} \times 6$ Begründung: Man wählt zunächst einen freien Platz von 7 Plätze, und in diesen Platz gibt es 6 möglich Würfeln. 6 Fakultät bedeutet, der Rest darf jede Zahl genau ein mal erscheinen, und die Reihenfolge davon ist auch wichtig.\\
- $\vert B \vert = \frac{6^7}{2}$ Begründung: gerade+gerade = gerade, nicht gerade + nicht gerade = gerade. Die sind alle Fällen.
+ $\vert B \vert = \frac{6^7}{2}$ Begründung: gerade+gerade = gerade, nicht gerade + nicht gerade = gerade. Die sind genau Hälfte der Fälle.\\
+ \begin{tabular}{|l|l|l|}
+  \hline
+  {\bfseries $\#$gerade} & {\bfseries $\#$nicht gerade} & {\bfseries Ergebnis}\\
+  \hline
+  \rowcolor{green}  0 & 7 & gerade\\
+  \hline
+  1 & 6 & nicht gerade\\
+  \hline
+  \rowcolor{green} 2 & 5 & gerade\\
+  \hline
+  3 & 4 & nicht gerade\\
+  \hline
+  \rowcolor{green} 4 & 3 & gerade\\
+  \hline
+  5 & 2 & nicht gerade\\
+  \hline
+  \rowcolor{green} 6 & 1 & gerade\\
+  \hline
+  7 & 0 & nicht gerade\\
+  \hline
+ \end{tabular}
+
 \end{enumerate}
 
 \section*{Aufgabe 3}
@@ -68,11 +91,24 @@ z.zg: $\mathcal{A}_1,\mathcal{A}_2, \ldots \in \mathcal{A} \Rightarrow \bigcap\l
  &Bew: Sei \quad\mathcal{A}_1,\mathcal{A}_2, \ldots \in \mathcal{A}\notag \\
  &\overset{Def (b)}{\Rightarrow} \mathcal{A}_1 ^ c,\mathcal{A}_2 ^ c, \ldots \in \mathcal{A}\notag \\
  &\overset{Def (c)}{\Rightarrow} \bigcup\limits_{i \geq 1}\mathcal{A}_i ^ c\in  \mathcal{A} \notag \\
- &\Rightarrow (\bigcap\limits_{i \geq 1}\mathcal{A}_i)^c \in \mathcal{A} (De-morgansche Gesetz)\notag \\
+ &\Rightarrow (\bigcap\limits_{i \geq 1}\mathcal{A}_i)^c \in \mathcal{A} (De-morgansche\ Gesetz)\notag \\
  &\overset{Def (b)}{\Rightarrow} \bigcap\limits_{i \geq 1}\mathcal{A}_i \in \mathcal{A} \notag
  \end{align}
 
 
 \section*{Aufgabe 4}
+IA: $\quad n = 0$
+ \begin{align}
+P(\mathcal{A}_1) - 0 \leq P(\mathcal{A}_1) \notag
+\end{align}
+IS: $n \rightarrow n + 1$
+\begin{align}
+&\qquad \sum_{i=1}^{n+1} P(\mathcal{A}_i) - \sum_{i < j} P(\mathcal{A}_i \bigcap \mathcal{A}_j)\notag \\
+&= \sum_{i=1}^{n} P(\mathcal{A}_i) - \sum_{i < j} P(\mathcal{A}_i \bigcap \mathcal{A}_j) + P(\mathcal{A}_{n+1}) - \sum_{i < n + 1} \mathcal{A}_i \bigcap \mathcal{A}_{n+1} \notag \\
+&\overset{IV}{\leq}P(\bigcup\limits_{i=1}^n\mathcal{A}_i) + P(\mathcal{A}_{n+1}) - \sum_{i < n + 1} \mathcal{A}_i \bigcap \mathcal{A}_{n+1}\notag \\
+&\overset{1.4(4)}{\leq} \sum_{i=1}^n P(\mathcal{A}_i) + P(\mathcal{A}_{n + 1}) - P(\bigcap\limits_{i = 1}^{n+1}\mathcal{A}_i) \notag \\
+&\leq \sum_{i=1}^{n+1} P(\mathcal{A}_i) - P(\bigcap\limits_{i = 1}^{n+1}\mathcal{A}_i) \notag \\
+&\overset{1.4(2)}{\leq} P(\bigcup\limits_{i = 1}^{n+1} \mathcal{A}_i)\notag
+\end{align}
 
 \end{document}
