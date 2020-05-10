@@ -24,12 +24,12 @@
 \section*{Aufgabe 1}
 \begin{enumerate}[a)]
  \item Beh.: $\mathcal{A} = 2^\Omega$ ist die kleinste solche $\sigma$-Algebra.\\[1ex]
- Bew.: Es ist nach Voraussetzung $G \subseteq \mathcal{A}$. \\
+ Bew.: Es ist nach Voraussetzung $\mathcal{G} \subseteq \mathcal{A}$. \\
  Sei nun $M \in 2^\Omega$ beliebig. Wir zeigen, dass $M$ auch in $\mathcal{A}$ ist und somit $\mathcal{A} = 2^\Omega$ gilt.\\
  1. Fall: $M = \emptyset$ oder $M = \Omega$ \\
    Nach $\sigma$-Algebra-Def. ist $M \in \mathcal{A}$. \\
  2. Fall: $M = \{a_1,...,a_n\}$ mit $a_1,...,a_n \in \Omega$. \\
- Wir sehen, dass $M= \{a_1\} \cup ... \cup \{a_n\}$ und da $\{a_1\}, ..., \{a_n\} \in G\subseteq \mathcal{A}$,
+ Wir sehen, dass $M= \{a_1\} \cup ... \cup \{a_n\}$ und da $\{a_1\}, ..., \{a_n\} \in \mathcal{G}\subseteq \mathcal{A}$,
  muss auch die Vereinigung, $M$, in $\mathcal{A}$ sein (nach $\sigma$-Algebra-Def.(c)).
  
   \qed
@@ -81,9 +81,25 @@ P(\bigsqcup \limits_{i \geq 1 } A_i ) & = \alpha \cdot P_1(\bigsqcup \limits_{i 
 \newpage
 
 \section*{Aufgabe 3}
+\begin{enumerate}[a)]
+\item
+Idee: Zeigen, dass es eine Injektion von $\{0,1\}^\mathbb{N}$ nach $C$ gibt?
+
+\item
+Man kann sehen, dass $A_n$ aus $2^n$ Intervallen der Größe $(\frac{1}{3})^n$ besteht.\\
+$\Rightarrow \lambda ^1(A_n) = 2^n \cdot (\frac{1}{3})^n = (\frac{2}{3})^n < 1$\\
+$\Rightarrow \lim \limits_{n\rightarrow \infty}(\lambda^1(A_n)) = 0$
+
+Nun ist $0 \leq \lambda^1( \bigcap \limits_{n=0}^\infty A_n) \leq \lim \limits_{n\rightarrow \infty}(\lambda^1(A_n)) = 0$\\
+Und daher ist $\lambda^1(C) = \lambda^1( \bigcap \limits_{n=0}^\infty A_n) = 0$.
+
+\end{enumerate}
 \newpage
 
 \section*{Aufgabe 4}
+Die Aufgabenstellung ist nicht so ganz klar wie es gemeint ist (insb. den Ereignisraum).
+Wir haben jetzt nicht berücksichtigt, wie die drei Personen nebeneinandersitzen (ob abc, acb, bca,...)
+und auch nicht wie die anderen 5 Plätze belegt sind.
 \begin{enumerate}[a)]
 \item
 $\Omega = \{(w_1,...,w_8) \mid w_i \in \{0,1\} \land \sum \limits_{i=1}^8 w_i = 3\}$\\
