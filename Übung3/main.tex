@@ -1,0 +1,100 @@
+% header
+\documentclass[10pt,a4paper]{article}
+
+%\usepackage[latin1]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{colortbl}
+\usepackage{ngerman}
+
+% the document
+\begin{document}
+
+% create the title
+% Please replace the data in brackets [] with actual data.
+\title{Abgabe - Übungsblatt [$3$]\\
+\small{Angewandte Mathematik: Stochastik}}
+\author{ [Vincent Schönbach] \and [Yihao Wang]}
+\date{\today}
+\maketitle
+
+\section*{Aufgabe 1}
+\begin{enumerate}[a)]
+ \item Beh.: $\mathcal{A} = 2^\Omega$ ist die kleinste solche $\sigma$-Algebra.\\[1ex]
+ Bew.: Es ist nach Voraussetzung $G \subseteq \mathcal{A}$. \\
+ Sei nun $M \in 2^\Omega$ beliebig. Wir zeigen, dass $M$ auch in $\mathcal{A}$ ist und somit $\mathcal{A} = 2^\Omega$ gilt.\\
+ 1. Fall: $M = \emptyset$ oder $M = \Omega$ \\
+   Nach $\sigma$-Algebra-Def. ist $M \in \mathcal{A}$. \\
+ 2. Fall: $M = \{a_1,...,a_n\}$ mit $a_1,...,a_n \in \Omega$. \\
+ Wir sehen, dass $M= \{a_1\} \cup ... \cup \{a_n\}$ und da $\{a_1\}, ..., \{a_n\} \in G\subseteq \mathcal{A}$,
+ muss auch die Vereinigung, $M$, in $\mathcal{A}$ sein (nach $\sigma$-Algebra-Def.(c)).
+ 
+  \qed
+  
+ \item
+ Wahrscheinlichkeitsmaß $P : \mathcal{A} \rightarrow [0,1]$ mit $P(\{\omega\})=p(\omega)$ $\forall \omega\in\Omega.$ \\
+ Für $\{a_1,...,a_n\}\in\mathcal{A}$ muss nach $\sigma$-Additivität gelten: \\
+ $P(\{a_1,...,a_n\})=P(\{a_1\} \cup ... \cup \{a_n\}) = p(a_1) + ... + p(a_n)$\\
+ Außerdem muss gelten $P(\Omega) = 1$ und somit $P(\emptyset) = 0$.\\
+ Eindeutigkeit folgt aus Vorgabe und Anwendung der Definition vom Wahrscheinlichkeitsmaß.
+ 
+ \item W-Raum $(\Omega, \mathcal{A}, P)$ mit \\
+ $\Omega = [1:6]$,\\
+ $\mathcal{A} = 2^\Omega$,\\
+ $P:\mathcal{A}\rightarrow [0,1]$ mit \\
+ $P(\{i\})=p(i)$ $\forall i\in[1:6]$, Rest von P ergibt sich wieder aus $\sigma$-Additivität\\
+ $P(\{1,2\}) = \dfrac{3}{10} + \dfrac{3}{10} = \dfrac{6}{10}$ \\
+ $P(\{1,6\}) = \dfrac{3}{10} + \dfrac{1}{10} = \dfrac{4}{10}$ \\
+ 
+\end{enumerate}
+
+\newpage
+
+\section*{Aufgabe 2}
+Da $(\Omega, \mathcal{A}, P_1)$ W-Raum ist, ist $(\Omega, \mathcal{A})$ Messraum.\\
+Bleibt zu zeigen, dass $P:= \alpha \cdot P_1 + (1-\alpha)\cdot P_2$ W-Maß ist.\\[1ex]
+1. Es muss $P(\Omega)=1$ gelten.
+
+\begin{equation}
+\begin{split}
+P(\Omega) & = \alpha \cdot P_1(\Omega) + (1-\alpha)\cdot P_2(\Omega) \\
+    &\overset{\mathrm{P_1, P_2 \text{W-Maß}}}{=}\alpha \cdot 1 + (1-\alpha) \cdot 1 \\
+    & = \alpha + 1-\alpha \\
+    & = 1
+\end{split}
+\end{equation}\\
+2. Es muss die $\sigma$-Additivität gelten.\\
+Seien $A_1,... \in \mathcal{A}$ paarweise disjunkte Ereignisse.\\
+
+\begin{equation}
+\begin{split}
+P(\bigsqcup \limits_{i \geq 1 } A_i ) & = \alpha \cdot P_1(\bigsqcup \limits_{i \geq 1 } A_i ) + (1-\alpha)\cdot P_2(\bigsqcup \limits_{i \geq 1 } A_i) \\
+&\overset{\mathrm{P_1, P_2 \text{W-Maß}}}{=} \alpha \cdot \sum \limits_{i \geq 1 } P_1(A_i) + (1-\alpha) \cdot \sum \limits_{i \geq 1 } P_2(A_i) \\
+& = \sum \limits_{i \geq 1 }(\alpha \cdot P_1(A_i) + (1-\alpha) \cdot P_2(A_i)) \\
+& = \sum \limits_{i \geq 1 } P(A_i)
+\end{split}
+\end{equation}\\
+\qed
+\newpage
+
+\section*{Aufgabe 3}
+\newpage
+
+\section*{Aufgabe 4}
+\begin{enumerate}[a)]
+\item
+$\Omega = \{(w_1,...,w_8) \mid w_i \in \{0,1\} \land \sum \limits_{i=1}^8 w_i = 3\}$\\
+$\mathcal{A} = 2^\Omega$\\
+$P(\Omega)=1$ und $\forall w \in \Omega: P(\omega) = \frac{1}{|\Omega|}$ \\
+(Rest von $P$ ergibt sich aus $\sigma$-Additivität.)
+\item
+$A =  \{(w_1,...,w_8) \in \Omega \mid w_i = w_{i+1} = w_{i+2} = 1, i \in [1:6] \lor w_7 = w_8 = w_1 = 1 \lor w_8 = w_1 = w_2 = 1\}$\\
+\item
+$|\Omega| = \binom{8}{3} = 56$\\
+$|A|=8$ \\
+$P(A) = \frac{8}{56} = \frac{1}{7}$
+\end{enumerate}
+\end{document}
