@@ -1,0 +1,78 @@
+% header
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{colortbl}
+\usepackage{diagbox}
+\usepackage{ngerman}
+
+% the document
+\begin{document}
+
+% create the title
+% Please replace the data in brackets [] with actual data.
+\title{Abgabe - Übungsblatt [$4$]\\
+\small{Angewandte Mathematik: Stochastik}}
+\author{ [Vincent Schönbach] \and [Yihao Wang]}
+\date{\today}
+\maketitle
+
+\section*{Aufgabe 1}
+
+\newpage
+\section*{Aufgabe 2}
+\begin{enumerate}[a)]
+ \item 
+$\Omega_3 = [1:6]^3 = \{(\omega_1, \omega_2, \omega_3) \mid \forall i: \omega_i \in [1:6]\}$\\
+$A = 2 ^ \Omega$\\
+$\Omega^\prime = \{(\omega_1, \omega_2, \omega_3) \mid \omega_1 < \omega_2 < \omega_3 \}$\\
+$A^\prime  = 2 ^ {\Omega^\prime} $\\
+\item
+
+\textbf{$\#$unterschiedlicher Augenzahlen 0:} d.h. 3 Augenzahlen sind identisch. Es gibt offensichtlich insgesmat 6 Fälle.\\
+\textbf{$\#$unterschiedlicher Augenzahlen 1:} d.h. 2 Augenzahlen sind identisch. Es gibt insgesmat 
+$\binom{6}{2} \times 2 = $ 30 Fälle.\\
+\textbf{$\#$unterschiedlicher Augenzahlen 2:} d.h. 3 Augenzahlen unterscheiden sich. Es gibt insgesmat 
+$\binom{6}{3} = $ 20 Fälle.
+\end{enumerate}
+
+
+\newpage
+\section*{Aufgabe 3}
+
+\newpage
+\section*{Aufgabe 4}
+\begin{enumerate}[a)]
+ \item
+\begin{tabular}{|l|ccc|}
+ \hline
+\diagbox{X1}{X2} & 1 & 2 & 4\\
+\hline
+2 & $\frac{1}{4}$ & 0 & 0\\
+3 & 0 & $\frac{1}{2}$ & 0\\
+4 & 0 & 0 & $\frac{1}{4}$\\
+\hline
+ \end{tabular}
+ 
+\item
+\begin{tabular}{|l|cc|l|}
+ \hline
+ \diagbox{y1}{y2} & 1 & 2 & Sum \\
+ \hline
+ 1 & 0.2 & 0.45 & 0.65\\
+ 2 & 0.3 & 0.05 & 0.35 \\
+ \hline
+ Sum & 0.5 & 0.5 & 1\\
+ \hline
+\end{tabular}
+
+\end{enumerate}
+
+
+
+\end{document}
