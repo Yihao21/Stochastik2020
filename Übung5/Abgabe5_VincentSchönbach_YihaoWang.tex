@@ -33,6 +33,7 @@
  Es gibt inegesamt $2^3$ Möglichkeiten: bbb/\textbf{bbr}/brb/\textbf{rbb}/\textbf{brr}/rbr/\textbf{rrb}/rrr\\
  Offensichtlich ist $P(X=k) = \frac{4}{8} = \frac{1}{2}$\\
  $X^{-1}(\{1\}) = \{(\omega_a,\omega_b,\omega_c) \mid \omega_a = \omega_b \neq \omega_c \lor  \omega_a = \omega_c \neq \omega_b \lor  \omega_c = \omega_b \neq \omega_a)\}$\\  
+ 
 \end{enumerate}
 
 
@@ -67,10 +68,11 @@ $\mathcal{A} = 2^\Omega$\\
  Wir finden, dass die Binomial-Verteilung schon reicht, aber natürlich kann man es mit Poisson-Verteilung approximiert werden.
  \item
  Wir übersetzen die Aufgabestellung, man muss nun mindestens 6 Aufgaben von 10 Fragen richtig antworten.\\
- $\sum_{i=6}^{19} \binom{10}{i} \times (\frac{1}{2})^{10-i} \times (\frac{1}{2})^i \approx 0.3769$\\
+ $\sum_{i=6}^{10} \binom{10}{i} \times (\frac{1}{2})^{10-i} \times (\frac{1}{2})^i \approx 0.3769$\\
  wie a), Binomial-Verteilung.
  \item 
- $\frac{1}{\binom{12}{6}} \approx 1.082 \times 10^{-3}$
+ $\frac{1 + \binom{12}{2} + \binom{12}{8}}{\binom{12}{6}} \approx 0.608$\\
+ Ja, es ist günstiger. 
 \end{enumerate}
 
 
