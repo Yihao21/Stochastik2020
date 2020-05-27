@@ -1,0 +1,64 @@
+% header
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{colortbl}
+\usepackage{ngerman}
+
+% the document
+\begin{document}
+
+% create the title
+% Please replace the data in brackets [] with actual data.
+\title{Abgabe - Übungsblatt [$6$]\\
+\small{Angewandte Mathematik: Stochastik}}
+\author{ [Vincent Schönbach] \and [Yihao Wang]}
+\date{\today}
+\maketitle
+
+\section*{Aufgabe 1}
+$\binom{10}{3} \times 0.6^3 \times \binom{7}{2} \times 0.1^2 \times 0.3^5 \approx 0.01322$
+
+\section*{Aufgabe 2}
+\begin{equation}
+ 1 - \frac{\binom{28}{9} + \binom{4}{1}\times \binom{28}{8}}{\binom{32}{9}} \approx 0.3105 \notag
+\end{equation}
+
+\section*{Aufgabe 3}
+\begin{enumerate}[a)]
+ \item 
+ $\frac{\binom{21}{3}}{\binom{23}{3}} \approx 0.75099$
+ \item
+ $\frac{\binom{21}{1}}{\binom{23}{3}} \approx 0.01186$
+\end{enumerate}
+
+
+\newpage
+\section*{Aufgabe 4}
+\begin{enumerate}[a)]
+ \item 
+ \begin{align}
+  1 - 98\%^n &> 0.9 \notag \\
+  98\%^n &< 0,1 \notag \\
+  \log_{98\%}0.1 &< n \notag \\
+  n &> 113.9 \notag
+ \end{align} 
+114 Glühbirnen müssen mindestens produziert werden.
+\item
+$(98\%)^200 \approx 0.01758$
+\item
+$\binom{100}{2} \times (98\%)^{98} \times (2\%)^2 \approx 0.2734$
+\end{enumerate}
+
+\section*{Bonusaufgabe 5}
+\begin{equation}
+ 0.9\% \times \binom{10^{21}}{4} \times 4.92 \times 10^{-18} \times (1-4.92 \times 10^{-18})^{10^{21}-4} \notag
+\end{equation}
+
+
+\end{document}
