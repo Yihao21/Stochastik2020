@@ -1,0 +1,91 @@
+% header
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{colortbl}
+\usepackage{ngerman}
+
+% the document
+\begin{document}
+
+% create the title
+% Please replace the data in brackets [] with actual data.
+\title{Abgabe - Übungsblatt [$7$]\\
+\small{Angewandte Mathematik: Stochastik}}
+\author{ [Vincent Schönbach] \and [Yihao Wang]}
+\date{\today}
+\maketitle
+
+\section*{Aufgabe 1}
+k bedeutet Person ist krank. t bedeutet der Test ist positiv.\\
+$P(k) = \frac{2}{10000}$,  $P(\lnot k) = \frac{9998}{10000}$\\
+$P(t \mid k) = \frac{97}{100}$\\
+$P(t \mid \lnot k) = \frac{0.2}{100}$\\
+\\
+Nach Bayes folgt 
+$P(k \mid t) = \frac{P(k) \cdot P(t \mid k)}{P(k) \cdot P(t \mid k) + P(\lnot k) \cdot P(t \mid \lnot k)}\approx 0.0884$
+
+\newpage
+
+ \section*{Aufgabe 2}
+$P(\text{Tourist wird befragt})=\frac{2}{3}$\\
+$P(\text{Richtung ist richtig} \mid \text{Tourist wird befragt}) = \frac{3}{4}$\\
+$P(\text{Richtung ist richtig} \mid \lnot \text{Tourist wird befragt}) = 0$\\
+
+ \begin{enumerate}[a)]
+ \item
+ k-mal Person befragen, jedes mal sagt diese Osten.\\\\
+ $P(\text{Osten ist richtig} \mid \lnot \text{Person ist Tourist}) = 0$,\\ da Mendacier immer das falsche antworten.\\\\
+ $P(\text{Osten ist richtig} \mid  \text{Person ist Tourist}) = 1 - P(\lnot \text{Osten ist richtig} \mid  \text{Person ist Tourist})\\ = 1 -(\frac{1}{4})^k$\\\\
+ 
+ Damit ist
+ $P(\text{Osten ist richtig}) = P(\text{Osten ist richtig} \mid \text{Person ist Tourist}) \cdot P(\text{Person ist Tourist}) + P(\text{Osten ist richtig} \mid \lnot \text{Person ist Tourist}) \cdot P(\lnot \text{Person ist Tourist}) = (1-(\frac{1}{4})^k)\cdot \frac{2}{3} + 0 \cdot \frac{1}{3} \\= (1-(\frac{1}{4})^k)\cdot \frac{2}{3}$
+ 
+ \item 
+ Einsetzen ergibt:\\
+ $k=1 \Rightarrow P(\text{Osten ist richtig})=0.5\\$
+ $k=2 \Rightarrow P(\text{Osten ist richtig})=0.625\\$
+ $k=3 \Rightarrow P(\text{Osten ist richtig})=0.65625\\$
+ $k=4 \Rightarrow P(\text{Osten ist richtig})=0.6640625\\$
+ 
+ \item
+ Weil diese Antwort nur vom Tourist kommen kann, gilt:\\\\
+ $P(\text{Osten ist richtig} \mid \text{Antwort: O, O, O, W}) \\= P(\text{Osten ist richtig} \mid \text{Antwort: O, O, O, W} \land \text{Person ist Tourist}) \\= 1 - P(\lnot \text{Osten ist richtig} \mid \text{Antwort: O, O, O, W} \land \text{Person ist Tourist}) \\= 1 - \frac{1}{4} \cdot \frac{1}{4} \cdot \frac{1}{4} \cdot \frac{3}{4} \approx 0.9883$\\
+ 
+\end{enumerate}
+
+\newpage
+
+ \section*{Aufgabe 3}
+  
+  \begin{enumerate}[a)]
+  
+  \item
+  $P(G) = 0.6$\\
+  $P(S) = 0.4$\\
+  $P(g \mid G) = 0.8$\\
+  $P(s \mid G) = 0.2$\\
+  $P(s \mid S) = 0.9$\\
+  $P(g \mid S) = 0.1$\\
+  $(\Omega, \mathcal{A}, P)$ mit $\Omega = \Omega _1 \times \Omega _2 = \{(G,g), (G,s), (S,g), (S,s)\}$\\
+  und $\Omega _1 = \{G, S\}, \Omega _2 = \{g, s\}, \mathcal{A} = 2^\Omega$\\
+  $P(\{(G,g)\}) = 0.6 \cdot 0.8$\\
+  $P(\{(G,s)\}) = 0.6 \cdot 0.2$\\
+  $P(\{(s,g)\}) = 0.4 \cdot 0.1$\\
+  $P(\{(S,s)\}) = 0.4 \cdot 0.9$\\
+  \item
+  
+  $P(\text{gutes Wetter}) = P(\text{richtige Vorhersage für G}) + P(\text{falsche Vorhersage für S})) = P(g) = 0.6 \cdot 0.8 + 0.4 \cdot 0.1 = 0.52$\\
+  \item
+  $A = \text{gestrige Vorhersage war gutes Wetter}$,\\$B = \text{heute gutes Wetter}$\\
+  $P(A \mid B) = P(A) = 0.6$, denn die Ereignisse sind unabhängig voneinander (zumindest nach Aufgabenstellung kein Hinweis auf Abhängigkeit).
+\end{enumerate}
+
+\newpage
+
+\end{document}
