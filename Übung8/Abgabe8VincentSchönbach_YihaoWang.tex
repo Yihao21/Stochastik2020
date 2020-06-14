@@ -52,7 +52,7 @@ d.h. $P(Y_1 = \omega_1, \ldots, Y_n = \omega_n) = P(Y_1) \cdot \ldots \cdot P(Y_
  \item $\Omega \rightarrow \left[0:n\right]$ \\
        A: $2^\Omega$\\
        P: $A \rightarrow \left[0,1\right]$\\
-       P(i) = $\binom{n}{i}\cdot P^i \cdot (1-P)^{n-i}$
+       P(i) = $\binom{n}{i}\cdot p^i \cdot (1-p)^{n-i}$
  \item $\hat P=\sum_{i=k+1}^n P(i)$
 \end{enumerate}
 
@@ -60,9 +60,9 @@ d.h. $P(Y_1 = \omega_1, \ldots, Y_n = \omega_n) = P(Y_1) \cdot \ldots \cdot P(Y_
 \section*{Bonusaufgabe 4}
 \begin{enumerate}[a)]
  \item Geometrische Verteilung
- \item $\hat \Omega = \lvert\{(\omega_1,\ldots,\omega_n) \mid \omega_1 = \ldots = \omega_{n-1} = 1, \omega_n = 0\} \rvert$ 1:stattgefunden 0:ausgefällt.\\
+ \item $\hat \Omega = \lvert\{(\omega_1,\ldots) \mid \omega_1 = \ldots = \omega_{n-1} = 1, \omega_n = 0, n \in \mathbb{N}_0\} \rvert$ 1:stattgefunden 0:ausgefällt.\\
  $\hat A = 2^{\hat \Omega}$\\
- $\hat P(i) = (1-\hat P) \cdot \hat P^i$, $\forall i \in \mathbb{N}_0$
+ $\hat P(i) = (1-\hat p) \cdot \hat p^i$, $\forall i \in \mathbb{N}_0$
  \item $\hat P$ stattgefunden werden.\\
  P(Aufgabe4.3) = $\hat P(5) + \hat P(6) = (1-\hat P) \cdot (\hat P^5 + \hat P^6) $
 \end{enumerate}
