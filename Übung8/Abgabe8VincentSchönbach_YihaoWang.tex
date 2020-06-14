@@ -1,0 +1,70 @@
+% header
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{colortbl}
+\usepackage{ngerman}
+
+% the document
+\begin{document}
+
+% create the title
+% Please replace the data in brackets [] with actual data.
+\title{Abgabe - Übungsblatt [$8$]\\
+\small{Angewandte Mathematik: Stochastik}}
+\author{ [Vincent Schönbach] \and [Yihao Wang]}
+\date{\today}
+\maketitle
+
+\section*{Aufgabe 1 Unabhänigkeit $\&$ Normalverteilung}
+Wenn die ZV X und Y unabhängig sind, z.zg: $P(X,Y) = P(X) \cdot P(Y)$
+\begin{align}
+ P(X,Y) &= \frac{1}{2\pi}\int \int_{X \times Y} exp(-\frac{x^2 + y^2}{2})dxdy \notag \\
+ &= \frac{1}{2\pi}\int_{-\infty}^{x_0} \left[ \int_{-\infty}^{y_0} exp(-\frac{x^2 + y^2}{2}) dy\right]dx\\
+ &= \frac{1}{2\pi}\int_{-\infty}^{x_0} \left[ \int_{-\infty}^{y_0} exp(-\frac{x^2}{2}) \cdot exp(-\frac{y^2}{2}) dy\right]dx \\
+&= \frac{1}{2\pi}\int_{-\infty}^{x_0} exp(-\frac{x^2}{2}) dx\cdot \int_{-\infty}^{y_0} exp(-\frac{y^2}{2}) dy\notag \\
+&= \frac{1}{2\pi}\int \int_{X} exp(-\frac{x^2 + y^2}{2})dxdy \cdot \frac{1}{2\pi}\int \int_{Y} exp(-\frac{x^2 + y^2}{2})dxdy \notag\\
+&= P(X) \cdot P(Y) \notag
+\end{align}
+\qed \\
+Erklärung:\\
+(1) Wir benutzen Satz von Fubini hier. $x_0 \in X$ und $y_0 \in Y$. Da die beide ZV sind, der untere Schrank ist negativ unendlich.\\
+(2) Eigenschaft von Integral.
+
+
+
+\newpage
+\section*{Aufgabe 2 Unabhänigkeitskriterium}
+``$\Rightarrow$'':$(Y_i)_{i \in \left[1:n\right]}$ ist unabhängig.\\
+d.h. $P(Y_1 = \omega_1, \ldots, Y_n = \omega_n) = P(Y_1) \cdot \ldots \cdot P(Y_n) = \prod_{i=1}^nP(Y_i = \omega_i)$\\
+``$\Leftarrow$'' analog.
+
+
+\newpage
+\section*{Aufgabe 3 Tutorium}
+\begin{enumerate}[a)]
+ \item Bernoulli-Verteilung.
+ \item $\Omega \rightarrow \left[0:n\right]$ \\
+       A: $2^\Omega$\\
+       P: $A \rightarrow \left[0,1\right]$\\
+       P = $\frac{\lvert A \rvert}{\Omega}$
+ \item $\hat P=\sum_{i=k+1}^n i^p \cdot (n-i)^{1-p}$
+\end{enumerate}
+
+\newpage
+\section*{Bonusaufgabe 4}
+\begin{enumerate}[a)]
+ \item Geometrische Verteilung
+ \item $\hat \Omega = \lvert\{(\omega_1,\ldots,\omega_n) \mid \omega_1 = \ldots = \omega_{n-1} = 1, \omega_n = 0\} \rvert$ 1:stattgefunden 0:ausgefällt.\\
+ $\hat A = 2^{\hat \Omega}$
+ \item $\hat P$ stattgefunden werden.\\
+ P(Aufgabe4.3) = $(\hat P)^6 \cdot (1-\hat P)^7 + (\hat P)^7 \cdot (1-\hat P)^8 $
+\end{enumerate}
+
+
+\end{document}
