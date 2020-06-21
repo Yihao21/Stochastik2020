@@ -26,7 +26,7 @@
  \item 
  \begin{tabular}{|c|c|c|c|}
  \hline
-  Geweinn & 1 & -9 & -1\\
+  Gewinn & 1 & -9 & -1\\
   \hline
   P & $\frac{25}{26}$ & $\frac{1}{36}$ & $\frac{10}{36}$\\
   \hline
@@ -37,12 +37,12 @@
  \begin{tabular}{|*{7}{c|}}
   \hline
   X & 1 & 2 & 3 & 4 & 5 & 6\\
-  \hline
+%   \hline
   P & $\frac{1}{2}$ & $\frac{1}{4}$ & $\frac{1}{8}$ & $\frac{1}{16}$ & $\frac{1}{32}$ & $\frac{1}{32}$ \\
   \hline
  \end{tabular}
  
- Bei 6 kann das Wappen entweder erscheint oder nicht erscheint, deswegen $\frac{1}{64} \times 2$.\\
+ Bei 6 kann das Wappen entweder erscheinen oder nicht erscheinen, deswegen $\frac{1}{64} \times 2$.\\
  $E_p(X) = 1 \times \frac{1}{2} + 2 \times \frac{1}{4} + 3 \times \frac{1}{8} + 4 \times \frac{1}{16} + 5 \times \frac{1}{32} + 6 \times \frac{1}{32} = 1.96875$
 \end{enumerate}
 
@@ -63,8 +63,8 @@ Erklärung:
  \item Nach Formel $E_p(X) = \sum_{\omega \in \Omega} X(\omega)P(\omega)$
  \item Für k=0, ist das Ergebnis 0, wir können direkt mit 1 anfangen.
  \item kurze Umformung.
- \item wir nehmen ein $\lambda$ raus. Und wir haben hier wieder eine Posionsverteilung.
- \item Die Summe von Posion-Verteilung ist 1.
+ \item wir nehmen ein $\lambda$ raus. Und wir haben hier wieder eine Possionsverteilung.
+ \item Die Summe von Possion-Verteilung ist 1.
 \end{enumerate}
 
 \begin{align*}
@@ -73,13 +73,13 @@ Erklärung:
  &= \lambda e^{-\lambda} \sum_{k=1}^{\infty} \frac{(k-1+1) \cdot \lambda^{k-1}}{(k-1)!}\\
  &=\lambda e^{-\lambda} \sum_{k=1}^{\infty} \frac{(k-1) \cdot \lambda^{k-1}}{(k-1)!} + \frac{\lambda^{k-1}}{(k-1)!}\\
  &=\lambda e^{-\lambda} \cdot(\sum_{k=1}^\infty \frac{(k-1) \cdot \lambda^{k-1}}{(k-1)!} + \sum_{k=1}^\infty \frac{\lambda^{k-1}}{(k-1)!})\\
- &=\lambda e^{-\lambda} \cdot(\lambda \cdot \sum_{k=1}^\infty \frac{\lambda^{k-2}}{(k-2)!} + \sum_{i = 0}^\infty \frac{\lambda^{i}}{i!}) \qquad i=k-1\\
+ &=\lambda e^{-\lambda} \cdot(\lambda \cdot \sum_{k=2}^\infty \frac{\lambda^{k-2}}{(k-2)!} + \sum_{i = 0}^\infty \frac{\lambda^{i}}{i!}) \qquad i=k-1\\
 &=\lambda e^{-\lambda} \cdot(\lambda \cdot \sum_{j=0}^\infty \frac{\lambda^{j}}{j!} + \sum_{i = 0}^\infty \frac{\lambda^{i}}{i!}) \qquad j=k-2\\
 &= \lambda(\lambda + 1)
 \end{align*}
 
 Erklärung:
-Tja, wir glauben der Beweis schon ausführlich genug ist und erklärt selbst. Nur k-1+1 ist bisschen Tricky in den Beweis. Nun benutzen wir den Hinweis der Aufgabe.
+Tja, wir glauben der Beweis ist schon ausführlich genug und erklärt sich selbst. Nur k-1+1 ist ein bisschen Tricky in dem Beweis. Nun benutzen wir den Hinweis der Aufgabe.
 \begin{align*}
  V_p(X) &= E_p(X^2) - E_p(X)^2\\
  &= \lambda(\lambda + 1) - \lambda ^2 = \lambda\\
@@ -96,7 +96,7 @@ Tja, wir glauben der Beweis schon ausführlich genug ist und erklärt selbst. Nur 
  &= \frac{1}{p} \notag
  \end{align}\qed
  
- Erklärung: Die haupte Idee ist nicht so unterschied wie A2, wir benutzen die Formel von Erwartungswert direkt. Und natürlich den Hinweis der Aufgabe.
+ Erklärung: Die Hauptidee ist nicht so unterschiedlich wie A2, wir benutzen die Formel von Erwartungswert direkt. Und natürlich den Hinweis der Aufgabe.
  
 \begin{align*}
  E_p(X^2) &= \sum_{n=0}^\infty n^2 \cdot p \cdot (1-p)^{n-1} \\
@@ -116,10 +116,10 @@ Tja, wir glauben der Beweis schon ausführlich genug ist und erklärt selbst. Nur 
 \newpage
 \section*{Aufgabe 4}
 \begin{enumerate}[a)]
- \item  Die ZV, die die Zahl der Würfe bis die i-te verschiedene Zahl geworfen ist, passt genau die geometrische Verteilung.\\
+ \item  Die ZV, die die Zahl der Würfe bis die i-te verschiedene Zahl geworfen beschreibt, da passt genau die geometrische Verteilung.\\
  $X_1 = 1$\\
  $P(X=i) = (\frac{5}{6}) \times (1-\frac{5}{6})^{(i-1)}$\\
- Die Erwartungswert von geometrische-Verteilung ist $\frac{1}{p}$(von A3). Wir zeigen hier mit einem Beispiel, für die 2-te verschiedene Zahl, die Wahrscheinlichkeit davon ist:\\
+ Der Erwartungswert von geometrische-Verteilung ist $\frac{1}{p}$(von A3). Wir zeigen hier mit einem Beispiel, für die 2-te verschiedene Zahl, die Wahrscheinlichkeit davon ist:\\
  $P(n) = \frac{5}{6} \times (1-\frac{5}{6})^{n-1} \Rightarrow E_p(2) = \frac{1}{p} = \frac{6}{5}$\\
  sonst ist analog, der Erwartungswert folgt:\\
  $1 + \frac{6}{5} + \frac{6}{4} + \ldots + 6 = 14.7$
@@ -130,7 +130,7 @@ $V(X) = \frac{1-\frac{4}{6}}{\frac{4}{6}^2} = \frac{3}{4} = 0.75$
 
 
 \newpage
-Ps: Hi Matthias. Ich(Yihao) muss noch mal vorstellen. Wir glauben, dass dieses Blatt haben wir gut gemacht. Schau mal, welche ich vorstellen soll. danke!
+Ps: Hi Matthias. Ich(Yihao) muss noch mal vorstellen. Wir glauben, dass wir dieses Blatt gut gemacht haben. Schau mal, welche ich vorstellen soll. danke!
 
 
 
